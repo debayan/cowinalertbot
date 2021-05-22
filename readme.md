@@ -1,6 +1,6 @@
 # cowin Telegram alert bot
 
-This sends vaccination slot alerts for folks in India who are using the cowin platform for booking them. This bot requires an auth token to operate. The public API is not accurate and hence using an authenticated bot is better.
+This sends vaccination slot alerts for folks in India who are using the cowin platform for booking them. This bot requires an auth token to operate. The public API is not accurate and hence using an authenticated bot is better. If you want to run this from outside India, you need to get a VPN first. I recommend NordVPN which also command line VPN access.
 
 ## Installation
 
