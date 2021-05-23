@@ -19,6 +19,7 @@ districtids = config['DEFAULT']['district_ids']
 telegramtoken = config['DEFAULT']['telegramtoken']
 cowinauth = config['DEFAULT']['cowinauth']
 personalchatid = config['DEFAULT']['personalchatid']
+weeks = int(config['DEFAULT']['weeks'])
 
 # print(telegramchatid)
 # print(districtids)
@@ -35,8 +36,7 @@ while True:
         print('District', distid)
         try:
             today = date.today()
-            weeks = [today.strftime('%d-%m-%Y'), (today + timedelta(days=7))]
-            for i in range(4):
+            for i in range(weeks):
                 search_for = (today + timedelta(days=7*i)).strftime('%d-%m-%Y')
                 print('Week of ' + search_for)
                 r = requests.get("https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id=%s&date=%s"%(distid, search_for), headers=headers)
