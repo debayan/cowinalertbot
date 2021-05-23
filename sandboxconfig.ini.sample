@@ -1,5 +1,6 @@
 [DEFAULT]
 telegramchatid=
+personalchatid=
 district_ids=
 telegramtoken=
 cowinauth=
