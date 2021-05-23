@@ -70,7 +70,7 @@ while True:
                         key = cd['name']+':'+cd['vaccine']+':'+cd['date']+':'+str(cd['min_age_limit'])
                         if key not in mdict:
                             mdict[key] = cd
-                        elif (cd['available'] > 0 and mdict[key] != cd) or cd['pincode'] == 700006:
+                        elif (cd['available'] > 0 and mdict[key] != cd):
                             count += 1
                             mdict[key] = cd
                             message = [str(cd['pincode']) + ' ' + str(cd['min_age_limit']) + '+ ' + cd['vaccine'] + ' ' + cd['date']]
