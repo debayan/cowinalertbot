@@ -13,6 +13,8 @@ pip3 install notifiers requests
 
 ```
 
+Copy `sandboxconfig.ini.sample` to `sandboxconfig.ini`.
+
 Now you need to fill up the sandboxconfig.ini file with the required data
 
 ```sh
