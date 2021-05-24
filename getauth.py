@@ -41,7 +41,6 @@ while True:
             today = date.today()
             for i in range(weeks):
                 search_for = (today + timedelta(days=7*i)).strftime('%d-%m-%Y')
-                print('Week of ' + search_for)
                 r = requests.get("https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id=%s&date=%s"%(distid, search_for), headers=headers)
                 # print(r.status_code)
                 # print(r.json())
@@ -82,8 +81,7 @@ while True:
                             message.append(cd['name'] + ', ' + cd['district'])
                             telegram.notify(message='\n'.join(message), token=telegramtoken, chat_id=telegramchatid)
                             time.sleep(0.25)
-                print('Slots found: ' + str(count))
-                print('========================')
+                print('Week of', search_for, '=', str(count))
                 time.sleep(2)
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
